@@ -4,7 +4,7 @@ import { AiFillInstagram, AiOutlineTwitter, AiOutlineFacebook, AiOutlineGithub} 
 const Footer = () => {
   return (
     <div className="footer-container">
-      <p>&copy;2022 Boutabaa Akram All rights reserverd</p>
+      <p>&copy;2022 Shop my Stuffs All rights reserverd</p>
       <p className="icons">
         <AiFillInstagram />
         <AiOutlineTwitter />
