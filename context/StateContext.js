@@ -8,11 +8,38 @@ export const StateContext = ({children})=>{
     const [totalPrice, settotalPrice] = useState();
     const [totalQuantities, settotalQuantities] = useState();
     const [qty, setQty] = useState(1);
+
+//add to cart function
+    const onAdd = (product, quantity) => {
+      const checkProductInCart = cartItems.find((item) => item._id === product._id);
+      
+      setTotalPrice((prevTotalPrice) => prevTotalPrice + product.price * quantity);
+      setTotalQuantities((prevTotalQuantities) => prevTotalQuantities + quantity);
+      
+      if(checkProductInCart) {
+        const updatedCartItems = cartItems.map((cartProduct) => {
+          if(cartProduct._id === product._id) return {
+            ...cartProduct,
+            quantity: cartProduct.quantity + quantity
+          }
+        })
+  
+        setCartItems(updatedCartItems);
+      } else {
+        product.quantity = quantity;
+        
+        setCartItems([...cartItems, { ...product }]);
+      }
+  
+      toast.success(`${qty} ${product.name} added to the cart.`);
+    } 
     
+
+//add qutity to cart
     const incQty = () => {
         setQty((prevQty) => prevQty + 1);
       }
-    
+    //remove qutity to cart
       const decQty = () => {
         setQty((prevQty) => {
           if(prevQty - 1 < 1) return 1;
