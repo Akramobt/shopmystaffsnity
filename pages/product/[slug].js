@@ -1,7 +1,8 @@
-import React from 'react';
+import React,{useState} from 'react';
 import {client,urlFor} from '../../lib/client';
 import { AiOutlineMinus, AiOutlinePlus, AiFillStar, AiOutlineStar } from 'react-icons/ai';
 import { Product } from '../../components';
+import {useStateContext} from '../../context/StateContext';
 
 const ProductDetails = ({product,products}) => {
    
@@ -10,14 +11,17 @@ const ProductDetails = ({product,products}) => {
         style: 'currency',
         currency: 'DZD',
       });
+
+     const[index,setIndex] = useState(0); 
+     const {decQty,incQty,qty}= useStateContext();
   return (
     <div>
     <div className="product-detail-container">
       <div>
         <div className="image-container">
-          <img src={urlFor(image && image[0])} className="product-detail-image" />
+          <img src={urlFor(image && image[index])} className="product-detail-image" />
         </div>
-     {/*   <div className="small-images-container">
+        <div className="small-images-container">
           {image?.map((item, i) => (
             <img 
               key={i}
@@ -26,7 +30,7 @@ const ProductDetails = ({product,products}) => {
               onMouseEnter={() => setIndex(i)}
             />
           ))}
-          </div>*/}
+          </div>
       </div>
 
       <div className="product-detail-desc">
@@ -49,9 +53,9 @@ const ProductDetails = ({product,products}) => {
         <div className="quantity">
           <h3>Quantity:</h3>
           <p className="quantity-desc">
-            <span className="minus" onClick=""><AiOutlineMinus /></span>
-            <span className="num">20</span>
-            <span className="plus" onClick=""><AiOutlinePlus /></span>
+            <span className="minus" onClick={decQty}><AiOutlineMinus /></span>
+            <span className="num">{qty}</span>
+            <span className="plus" onClick={incQty}><AiOutlinePlus /></span>
           </p>
         </div>
         <div className="buttons">
