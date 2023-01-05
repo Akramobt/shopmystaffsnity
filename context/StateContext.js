@@ -3,10 +3,10 @@ import {toast} from 'react-hot-toast';
 
 const Context = createContext();
 export const StateContext = ({children})=>{
-    const [showCart, setshowCart] = useState(false);
-    const [cartItems, setcartItems] = useState();
-    const [totalPrice, settotalPrice] = useState();
-    const [totalQuantities, settotalQuantities] = useState();
+    const [showCart, setShowCart] = useState(false);
+    const [cartItems, setCartItems] = useState([]);
+    const [totalPrice, setTotalPrice] = useState();
+    const [totalQuantities, setTotalQuantities] = useState(0);
     const [qty, setQty] = useState(1);
 
 //add to cart function
@@ -53,12 +53,15 @@ export const StateContext = ({children})=>{
         <Context.Provider
         value={{
             showCart,
+            setShowCart,
             cartItems,
             totalPrice,
             totalQuantities,
             qty,
             incQty,
-            decQty
+            decQty,
+            onAdd
+
             
           }}>
             {children}
