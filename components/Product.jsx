@@ -4,15 +4,17 @@ import { urlFor } from '../lib/client';
 
 const Product = ({product : {image , name, slug,price}}) => {
   
-
-   let USDollar = new Intl.NumberFormat('en-US', {
+  let USDollar = new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: 'USD',
 });
+
+
 let DZD = new Intl.NumberFormat('fr-DZ', {
   style: 'currency',
   currency: 'DZD',
 });
+
   return (
     
     <div>

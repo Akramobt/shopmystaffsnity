@@ -7,6 +7,12 @@ import { useStateContext } from '../context/StateContext';
 import {urlFor} from '../lib/client';
 
 const Cart = () => {
+
+  let DZD = new Intl.NumberFormat('fr-DZ', {
+    style: 'currency',
+    currency: 'DZD',
+  });
+  
   const cartRef= useRef();
   const {totalPrice,totalQuantities,cartItems,setShowCart} = useStateContext();
   return (
@@ -36,6 +42,21 @@ const Cart = () => {
             </Link>
           </div>
         )}
+        <div className="product-container">
+          {cartItems.length>= 1 && cartItems.map((item,index)=>(
+            <div className="product" key={item._id}>
+              <img src={urlFor(item?.image[0])}  className='cart-product-image'/>
+              <div className="item-desc">
+                <div className="flex top">
+                  <h5>{item.name}</h5>
+                  <h5>{DZD.format(item.price)}</h5>
+                </div>
+              </div>
+
+            </div>
+
+          ))}
+        </div>
       </div>
 
     </div>
