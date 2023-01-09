@@ -347,7 +347,7 @@ padding: 20px 10px;
   padding: 20px;
 }
 .product .cart-product-image{
-  width:180px ;
+  width:150px ;
   height: 150px;
     border-radius: 15px;
  background-color: #ebebeb;
@@ -369,6 +369,7 @@ padding: 20px 10px;
   font-size: 20px;
 }
 .total{
+  
   display: flex;
   justify-content: space-between;
 }
@@ -384,11 +385,13 @@ padding: 20px 10px;
   border: none;
 }
 .cart-bottom{
+  background-color: #fff;
   position: absolute;
   bottom: 12px;
   right: 5px;
-width: 100%;
-padding: 30px 65px;
+  width: 99%;
+  height: 150px;
+  padding: 30px 65px;
 
 }
 

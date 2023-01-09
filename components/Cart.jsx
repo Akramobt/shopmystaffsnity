@@ -14,7 +14,7 @@ const Cart = () => {
   });
   
   const cartRef= useRef();
-  const {totalPrice,totalQuantities,cartItems,setShowCart} = useStateContext();
+  const {totalPrice,totalQuantities,cartItems,setShowCart,toggleCartItemQuanitity,onRemove} = useStateContext();
   return (
     <div className='cart-wrapper' ref={cartRef}>
       <div className="cart-container">
@@ -51,12 +51,44 @@ const Cart = () => {
                   <h5>{item.name}</h5>
                   <h5>{DZD.format(item.price)}</h5>
                 </div>
+                <div className='flex bottom'>
+                  <div>
+                  <p className="quantity-desc">
+                     <span className="minus" onClick={()=>toggleCartItemQuanitity(item._id,'dec')}><AiOutlineMinus /></span>
+                     <span className="num" onClick="">{item.quantity}</span>
+                    <span className="plus" onClick={()=>toggleCartItemQuanitity(item._id,'inc')}><AiOutlinePlus /></span>
+                  </p>
+                  </div>
+                  <button type="button" className='remove-item'
+                  onClick={()=>onRemove(item)}
+                  >
+                    <TiDeleteOutline/>
+
+                  </button>
+
+                </div>
               </div>
 
             </div>
 
           ))}
+
         </div>
+        {cartItems.length >= 1 && (
+          <div className="cart-bottom">
+             <div className="total">
+              <h3>Total:</h3>
+              <h3>{DZD.format(totalPrice)}</h3>
+             </div>
+             <div className="btn-container">
+              <button type='button' className='btn' onClick="">
+                Pay with Visa
+
+              </button>
+             </div>
+          </div>
+
+        )}
       </div>
 
     </div>
