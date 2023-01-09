@@ -384,6 +384,9 @@ padding: 20px 10px;
   background: transparent;
   border: none;
 }
+.remove-item:hover{
+  transform: scale(1.1,1.1);
+}
 .cart-bottom{
   background-color: #fff;
   position: absolute;
