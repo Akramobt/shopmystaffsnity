@@ -1,6 +1,3 @@
-[![Netlify Status](https://shopmystaffs.vercel.app)](https://shopmystaffs.vercel.app)
-![Vercel](http://therealsujitk-vercel-badge.vercel.app/?app=shopmystaffs.vercel.app)(https://shopmystaffs.vercel.app)
-
 [![Vercel](https://therealsujitk-vercel-badge.vercel.app/?app=shopmystaffs.vercel.app)](https://shopmystaffs.vercel.app)
 
 ## Getting Started
