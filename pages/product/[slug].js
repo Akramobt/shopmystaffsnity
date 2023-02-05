@@ -6,7 +6,7 @@ import {useStateContext} from '../../context/StateContext';
 
 const ProductDetails = ({product,products}) => {
    
-    const{image,name,details,price}=product;
+    const{image,name,details,price} = product;
     let DZD = new Intl.NumberFormat('fr-DZ', {
         style: 'currency',
         currency: 'DZD',
