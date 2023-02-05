@@ -16,7 +16,7 @@ yarn install
 ![NPM](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white)
 ![REACTJS](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![STRIPE](https://img.shields.io/badge/Stripe-626CD9?style=for-the-badge&logo=Stripe&logoColor=white)
-![SANITY](https://img.shields.io/badge/Sanity-626CD9?style=for-the-badge&logo=Sanity&logoColor=white)
+![SANITY](https://img.shields.io/badge/Sanity-CB3837?style=for-the-badge&logo=Sanity&logoColor=white)
 
 
 
