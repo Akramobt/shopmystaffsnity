@@ -648,10 +648,11 @@ margin-top: 160px;
   .banner-desc .left h3{
     font-weight: 900;
     font-size: 50px;
-    margin-left: 5px;
+    margin-left: -5px;
   }
   .banner-desc .left p{
     margin:18px;
+    margin-left: -5px;
   }
   .banner-desc .right h3{
     font-size: 45px;
