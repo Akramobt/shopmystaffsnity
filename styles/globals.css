@@ -162,7 +162,7 @@ width: 100%;
 .hero-banner-container h1{
   color: white;
   font-size: 10em;
-  margin-left: -20px;
+  /*margin-left: -20px;*/
   text-transform: uppercase;
 }
 .hero-banner-image{
@@ -630,9 +630,9 @@ margin-top: 160px;
     height: 560px;
   }
   .hero-banner-image{
-    width: 77%;
-    height: 62%;
-    top: -2%;
+    width: 60%;
+    height: 50%;
+    top: 10%;
     right: -6%;
   }
   .footer-banner-container{
@@ -641,7 +641,7 @@ margin-top: 160px;
   }
   .footer-banner-image{
     width: 77%;
-    left: 30%;
+    left: 33%;
     top: 6%;
     height: 56%
   }
